@@ -1,0 +1,59 @@
+<div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
+    <!-- Profile Header -->
+    <div class="text-center mb-8">
+        <h2 class="text-3xl font-semibold text-gray-800">Your Profile</h2>
+        <p class="text-gray-600">Manage your personal information and preferences.</p>
+    </div>
+
+    <!-- Profile Section -->
+    <div class="flex items-center justify-center mb-8">
+        <div class="relative">
+            <!-- Profile Picture -->
+            <img src="https://via.placeholder.com/150" alt="Profile Picture" class="w-32 h-32 object-cover rounded-full border-4 border-green-600">
+            <button class="absolute bottom-0 right-0 bg-green-600 text-white rounded-full p-2 text-sm">
+                <i class="fas fa-camera"></i> Change
+            </button>
+        </div>
+    </div>
+
+    <!-- Profile Information Form -->
+    <form>
+        <!-- Name -->
+        <div class="mb-6">
+            <label for="name" class="block text-gray-700 font-medium">Full Name</label>
+            <input type="text" id="name" name="name" class="w-full p-3 mt-2 border border-gray-300 rounded-lg" placeholder="John Doe" required>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-6">
+            <label for="email" class="block text-gray-700 font-medium">Email Address</label>
+            <input type="email" id="email" name="email" class="w-full p-3 mt-2 border border-gray-300 rounded-lg" placeholder="john@example.com" required>
+        </div>
+
+        <!-- Address -->
+        <div class="mb-6">
+            <label for="address" class="block text-gray-700 font-medium">Delivery Address</label>
+            <textarea id="address" name="address" class="w-full p-3 mt-2 border border-gray-300 rounded-lg" placeholder="123 Main St, City, Country" rows="3" required></textarea>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="mb-6">
+            <label for="phone" class="block text-gray-700 font-medium">Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="w-full p-3 mt-2 border border-gray-300 rounded-lg" placeholder="123-456-7890" required>
+        </div>
+
+        <!-- Password Change -->
+        <div class="mb-6">
+            <label for="password" class="block text-gray-700 font-medium">Change Password</label>
+            <input type="password" id="password" name="password" class="w-full p-3 mt-2 border border-gray-300 rounded-lg" placeholder="********">
+        </div>
+
+        <!-- Save Button -->
+        <button type="submit" class="w-full py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition duration-300">Save Changes</button>
+    </form>
+
+    <!-- Logout Button -->
+    <div class="mt-6 text-center">
+        <button class="bg-red-600 text-white py-2 px-6 rounded-lg hover:bg-red-700 transition duration-300">Logout</button>
+    </div>
+</div>

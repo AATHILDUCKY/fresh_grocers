@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Grocers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+    
+</head>
+<body class="font-sans bg-gray-100">
+
+    <!-- Navbar Section -->
+    <nav class="bg-green-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-lg font-bold">Fresh Grocers</div>
+                <div>
+                    <ul class="flex space-x-6">
+                        <li><a href="#" data-page="home.html" class="navbar-link">Home</a></li>
+                        <li><a href="#" data-page="login.html" class="navbar-link">Login</a></li>
+                        <li><a href="#" data-page="product.html" class="navbar-link">Products</a></li>
+                        <li><a href="#" data-page="profile.html" class="navbar-link">Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section (Dynamic Content Loading) -->
+    <div id="content" class="min-h-screen p-6">
+        <!-- Default page content will be loaded here -->
+        <!-- Initially load home.html -->
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-green-600 text-white py-4 mt-8">
+        <div class="text-center">
+            <p>&copy; 2025 Fresh Grocers | All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>
