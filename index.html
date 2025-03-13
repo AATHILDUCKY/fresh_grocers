@@ -1,44 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fresh Grocers</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js" defer></script>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Grocer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
-<body class="font-sans bg-gray-100">
+<body class="bg-gray-100">
+  <!-- Header -->
+  <!-- Header -->
+<header class="bg-green-600 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold">Fresh Grocer</h1>
+  
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6">
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="product.html" class="hover:underline">Products</a></li>
+          <li><a href="login.html" class="hover:underline">Login</a></li>
+          <li><a href="register.html" class="hover:underline">Register</a></li>
+        </ul>
+      </nav>
+  
+      <!-- Mobile Hamburger Menu -->
+      <div class="md:hidden flex items-center">
+        <button id="hamburger-icon" class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-green-600 text-white py-4">
+      <ul class="flex flex-col space-y-4 px-4">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="product.html" class="hover:underline">Products</a></li>
+        <li><a href="login.html" class="hover:underline">Login</a></li>
+        <li><a href="register.html" class="hover:underline">Register</a></li>
+      </ul>
+    </div>
+  </header>
+  
+  <script>
+    // JavaScript to toggle the hamburger menu
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+    const mobileMenu = document.getElementById("mobile-menu");
+  
+    hamburgerIcon.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
 
-    <!-- Navbar Section -->
-    <nav class="bg-green-600 text-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-3">
-            <div class="flex justify-between items-center">
-                <div class="text-lg font-bold">Fresh Grocers</div>
-                <div>
-                    <ul class="flex space-x-6">
-                        <li><a href="#" data-page="home.html" class="navbar-link">Home</a></li>
-                        <li><a href="#" data-page="login.html" class="navbar-link">Login</a></li>
-                        <li><a href="#" data-page="product.html" class="navbar-link">Products</a></li>
-                        <li><a href="#" data-page="profile.html" class="navbar-link">Profile</a></li>
-                    </ul>
+
+
+  <!-- Main Content -->
+  <main class="container mx-auto my-10">
+    <div class="text-center bg-green-50 py-12">
+        <!-- Hero Section -->
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl font-bold text-green-600 leading-tight">Welcome to Fresh Grocers!</h1>
+            <p class="mt-4 text-lg text-gray-700">Get the best fresh groceries delivered to your doorsteps. Shop now and experience the convenience.</p>
+            <div class="mt-6">
+                <a href="product.html" class="bg-green-600 text-white px-6 py-3 rounded-lg text-lg">Shop Now</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Featured Categories Section -->
+    <div class="bg-white py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold text-gray-800">Explore Our Fresh Categories</h2>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Category 1 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <img src="https://raw.githubusercontent.com/AATHILDUCKY/fresh_grocers/refs/heads/main/frvg.jpg" alt="Fruits & Vegetables" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Fruits & Vegetables</h3>
+                    <p class="text-gray-600 mt-2">Fresh and organic produce delivered to your home.</p>
+                </div>
+                <!-- Category 2 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <img src="https://raw.githubusercontent.com/AATHILDUCKY/fresh_grocers/refs/heads/main/dairy.jpg" alt="Dairy Products" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Dairy Products</h3>
+                    <p class="text-gray-600 mt-2">Fresh milk, cheese, and other dairy essentials.</p>
+                </div>
+                <!-- Category 3 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+                    <img src="https://raw.githubusercontent.com/AATHILDUCKY/fresh_grocers/refs/heads/main/back.jpg" alt="Bakery Items" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Bakery Items</h3>
+                    <p class="text-gray-600 mt-2">Delicious, freshly baked goods delivered daily.</p>
                 </div>
             </div>
         </div>
-    </nav>
-
-    <!-- Content Section (Dynamic Content Loading) -->
-    <div id="content" class="min-h-screen p-6">
-        <!-- Default page content will be loaded here -->
-        <!-- Initially load home.html -->
     </div>
-
+    
+    <!-- Featured Products Section -->
+    <div class="py-12 bg-green-50">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold text-gray-800">Featured Products</h2>
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Product 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://raw.githubusercontent.com/AATHILDUCKY/fresh_grocers/refs/heads/main/apple.jpg" alt="Product 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Organic Apples</h3>
+                    <p class="text-gray-600 mt-2">$3.99 per kg</p>
+                    <button class="mt-3 bg-green-600 text-white px-4 py-2 rounded-lg">Add to Cart</button>
+                </div>
+                <!-- Product 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://raw.githubusercontent.com/AATHILDUCKY/fresh_grocers/refs/heads/main/tom.jpg" alt="Product 2" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Fresh Tomatoes</h3>
+                    <p class="text-gray-600 mt-2">$2.50 per kg</p>
+                    <button class="mt-3 bg-green-600 text-white px-4 py-2 rounded-lg">Add to Cart</button>
+                </div>
+                <!-- Product 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <img src="https://raw.githubusercontent.com/AATHILDUCKY/fresh_grocers/refs/heads/main/milk.jpg" alt="Product 3" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Milk (1L)</h3>
+                    <p class="text-gray-600 mt-2">$1.99</p>
+                    <button class="mt-3 bg-green-600 text-white px-4 py-2 rounded-lg">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Testimonials Section -->
+    <div class="bg-white py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold text-gray-800">What Our Customers Say</h2>
+            <div class="mt-8 flex flex-wrap justify-center gap-8">
+                <!-- Testimonial 1 -->
+                <div class="max-w-md bg-green-100 p-6 rounded-lg shadow-lg">
+                    <p class="text-lg text-gray-700 italic">"Fresh Grocers has made shopping for fresh produce so much easier. The delivery is fast, and the quality is top-notch!"</p>
+                    <p class="mt-4 font-semibold text-gray-800">John Doe</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="max-w-md bg-green-100 p-6 rounded-lg shadow-lg">
+                    <p class="text-lg text-gray-700 italic">"I love the variety of fresh products offered. From fruits to dairy, they have everything I need for my family!"</p>
+                    <p class="mt-4 font-semibold text-gray-800">Jane Smith</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="max-w-md bg-green-100 p-6 rounded-lg shadow-lg">
+                    <p class="text-lg text-gray-700 italic">"The convenience of ordering fresh groceries online has saved me so much time. Great service!"</p>
+                    <p class="mt-4 font-semibold text-gray-800">Mark Lee</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Footer Section -->
-    <footer class="bg-green-600 text-white py-4 mt-8">
-        <div class="text-center">
-            <p>&copy; 2025 Fresh Grocers | All Rights Reserved</p>
+    <footer class="bg-green-600 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Fresh Grocers. All Rights Reserved. | Designed for a better shopping experience</p>
         </div>
     </footer>
-
+    
+  </main>
 </body>
 </html>

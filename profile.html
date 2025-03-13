@@ -1,59 +1,73 @@
-<div class="bg-white p-8 rounded-lg shadow-lg max-w-lg mx-auto">
-    <!-- Profile Header -->
-    <div class="text-center mb-8">
-        <h2 class="text-3xl font-semibold text-gray-800">Your Profile</h2>
-        <p class="text-gray-600">Manage your personal information and preferences.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - Fresh Grocer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="bg-gray-100">
+  <!-- Header -->
+<!-- Header -->
+<header class="bg-green-600 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold">Fresh Grocer</h1>
+  
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6">
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="product.html" class="hover:underline">Products</a></li>
+          <li><a href="login.html" class="hover:underline">Login</a></li>
+          <li><a href="register.html" class="hover:underline">Register</a></li>
+        </ul>
+      </nav>
+  
+      <!-- Mobile Hamburger Menu -->
+      <div class="md:hidden flex items-center">
+        <button id="hamburger-icon" class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
     </div>
-
-    <!-- Profile Section -->
-    <div class="flex items-center justify-center mb-8">
-        <div class="relative">
-            <!-- Profile Picture -->
-            <img src="https://via.placeholder.com/150" alt="Profile Picture" class="w-32 h-32 object-cover rounded-full border-4 border-green-600">
-            <button class="absolute bottom-0 right-0 bg-green-600 text-white rounded-full p-2 text-sm">
-                <i class="fas fa-camera"></i> Change
-            </button>
-        </div>
+  
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-green-600 text-white py-4">
+      <ul class="flex flex-col space-y-4 px-4">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="product.html" class="hover:underline">Products</a></li>
+        <li><a href="login.html" class="hover:underline">Login</a></li>
+        <li><a href="register.html" class="hover:underline">Register</a></li>
+      </ul>
     </div>
+  </header>
+  
+  <script>
+    // JavaScript to toggle the hamburger menu
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+    const mobileMenu = document.getElementById("mobile-menu");
+  
+    hamburgerIcon.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
 
-    <!-- Profile Information Form -->
-    <form>
-        <!-- Name -->
-        <div class="mb-6">
-            <label for="name" class="block text-gray-700 font-medium">Full Name</label>
-            <input type="text" id="name" name="name" class="w-full p-3 mt-2 border border-gray-300 rounded-lg" placeholder="John Doe" required>
-        </div>
 
-        <!-- Email -->
-        <div class="mb-6">
-            <label for="email" class="block text-gray-700 font-medium">Email Address</label>
-            <input type="email" id="email" name="email" class="w-full p-3 mt-2 border border-gray-300 rounded-lg" placeholder="john@example.com" required>
-        </div>
 
-        <!-- Address -->
-        <div class="mb-6">
-            <label for="address" class="block text-gray-700 font-medium">Delivery Address</label>
-            <textarea id="address" name="address" class="w-full p-3 mt-2 border border-gray-300 rounded-lg" placeholder="123 Main St, City, Country" rows="3" required></textarea>
-        </div>
 
-        <!-- Phone Number -->
-        <div class="mb-6">
-            <label for="phone" class="block text-gray-700 font-medium">Phone Number</label>
-            <input type="tel" id="phone" name="phone" class="w-full p-3 mt-2 border border-gray-300 rounded-lg" placeholder="123-456-7890" required>
-        </div>
-
-        <!-- Password Change -->
-        <div class="mb-6">
-            <label for="password" class="block text-gray-700 font-medium">Change Password</label>
-            <input type="password" id="password" name="password" class="w-full p-3 mt-2 border border-gray-300 rounded-lg" placeholder="********">
-        </div>
-
-        <!-- Save Button -->
-        <button type="submit" class="w-full py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition duration-300">Save Changes</button>
-    </form>
-
-    <!-- Logout Button -->
-    <div class="mt-6 text-center">
-        <button class="bg-red-600 text-white py-2 px-6 rounded-lg hover:bg-red-700 transition duration-300">Logout</button>
+  <!-- Profile Content -->
+  <main class="container mx-auto my-10">
+    <h2 class="text-3xl font-bold text-center mb-6">Your Profile</h2>
+    <div class="bg-white p-6 rounded-lg shadow-lg">
+      <h3 class="text-xl font-semibold">Personal Information</h3>
+      <p class="text-gray-600 mt-2">Name: John Doe</p>
+      <p class="text-gray-600">Email: john@example.com</p>
+      <a href="#" class="mt-4 inline-block bg-green-600 text-white px-6 py-2 rounded-full">Edit Profile</a>
     </div>
-</div>
+  </main>
+</body>
+</html>

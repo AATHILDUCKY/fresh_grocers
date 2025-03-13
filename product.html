@@ -1,82 +1,144 @@
-<div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 p-4">
-    <!-- Product 1 -->
-    <div class="product-item bg-white p-4 rounded-lg shadow-lg">
-        <img src="https://via.placeholder.com/150" alt="Product 1" class="w-full h-32 object-cover rounded-lg mb-4">
-        <h3 class="text-lg font-semibold text-gray-800">Product 1</h3>
-        <p class="text-gray-600">Fresh and organic fruits</p>
-        <button class="mt-3 bg-green-600 text-white py-2 px-4 rounded-lg">Add to Cart</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Fresh Grocer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="bg-gray-100">
+  <!-- Header -->
+  <!-- Header -->
+<header class="bg-green-600 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold">Fresh Grocer</h1>
+  
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6">
+        <ul class="flex space-x-6">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="product.html" class="hover:underline">Products</a></li>
+          <li><a href="login.html" class="hover:underline">Login</a></li>
+          <li><a href="register.html" class="hover:underline">Register</a></li>
+        </ul>
+      </nav>
+  
+      <!-- Mobile Hamburger Menu -->
+      <div class="md:hidden flex items-center">
+        <button id="hamburger-icon" class="text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
     </div>
-    <!-- Product 2 -->
-    <div class="product-item bg-white p-4 rounded-lg shadow-lg">
-        <img src="https://via.placeholder.com/150" alt="Product 2" class="w-full h-32 object-cover rounded-lg mb-4">
-        <h3 class="text-lg font-semibold text-gray-800">Product 2</h3>
-        <p class="text-gray-600">Fresh vegetables and greens</p>
-        <button class="mt-3 bg-green-600 text-white py-2 px-4 rounded-lg">Add to Cart</button>
+  
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-green-600 text-white py-4">
+      <ul class="flex flex-col space-y-4 px-4">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="product.html" class="hover:underline">Products</a></li>
+        <li><a href="login.html" class="hover:underline">Login</a></li>
+        <li><a href="register.html" class="hover:underline">Register</a></li>
+      </ul>
     </div>
-    <!-- Product 3 -->
-    <div class="product-item bg-white p-4 rounded-lg shadow-lg">
-        <img src="https://via.placeholder.com/150" alt="Product 3" class="w-full h-32 object-cover rounded-lg mb-4">
-        <h3 class="text-lg font-semibold text-gray-800">Product 3</h3>
-        <p class="text-gray-600">Organic dairy products</p>
-        <button class="mt-3 bg-green-600 text-white py-2 px-4 rounded-lg">Add to Cart</button>
-    </div>
-    <!-- Product 4 -->
-    <div class="product-item bg-white p-4 rounded-lg shadow-lg">
-        <img src="https://via.placeholder.com/150" alt="Product 4" class="w-full h-32 object-cover rounded-lg mb-4">
-        <h3 class="text-lg font-semibold text-gray-800">Product 4</h3>
-        <p class="text-gray-600">Fresh bread and bakery items</p>
-        <button class="mt-3 bg-green-600 text-white py-2 px-4 rounded-lg">Add to Cart</button>
-    </div>
-    <!-- Product 5 -->
-    <div class="product-item bg-white p-4 rounded-lg shadow-lg">
-        <img src="https://via.placeholder.com/150" alt="Product 5" class="w-full h-32 object-cover rounded-lg mb-4">
-        <h3 class="text-lg font-semibold text-gray-800">Product 5</h3>
-        <p class="text-gray-600">Organic eggs and meats</p>
-        <button class="mt-3 bg-green-600 text-white py-2 px-4 rounded-lg">Add to Cart</button>
-    </div>
-    <!-- Product 6 -->
-    <div class="product-item bg-white p-4 rounded-lg shadow-lg">
-        <img src="https://via.placeholder.com/150" alt="Product 6" class="w-full h-32 object-cover rounded-lg mb-4">
-        <h3 class="text-lg font-semibold text-gray-800">Product 6</h3>
-        <p class="text-gray-600">Fresh seafood and fish</p>
-        <button class="mt-3 bg-green-600 text-white py-2 px-4 rounded-lg">Add to Cart</button>
-    </div>
-</div>
-
-<!-- See More Button -->
-<div class="text-center mt-6">
-    <button id="see-more" class="bg-green-600 text-white py-2 px-6 rounded-lg hover:bg-green-700 transition duration-300">See More</button>
-</div>
-
-<!-- Hidden Products (for See More button functionality) -->
-<div id="more-products" class="hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 p-4">
-    <!-- Product 7 -->
-    <div class="product-item bg-white p-4 rounded-lg shadow-lg">
-        <img src="https://via.placeholder.com/150" alt="Product 7" class="w-full h-32 object-cover rounded-lg mb-4">
-        <h3 class="text-lg font-semibold text-gray-800">Product 7</h3>
-        <p class="text-gray-600">Premium olive oils</p>
-        <button class="mt-3 bg-green-600 text-white py-2 px-4 rounded-lg">Add to Cart</button>
-    </div>
-    <!-- Product 8 -->
-    <div class="product-item bg-white p-4 rounded-lg shadow-lg">
-        <img src="https://via.placeholder.com/150" alt="Product 8" class="w-full h-32 object-cover rounded-lg mb-4">
-        <h3 class="text-lg font-semibold text-gray-800">Product 8</h3>
-        <p class="text-gray-600">Natural honey and jams</p>
-        <button class="mt-3 bg-green-600 text-white py-2 px-4 rounded-lg">Add to Cart</button>
-    </div>
-    <!-- Product 9 -->
-    <div class="product-item bg-white p-4 rounded-lg shadow-lg">
-        <img src="https://via.placeholder.com/150" alt="Product 9" class="w-full h-32 object-cover rounded-lg mb-4">
-        <h3 class="text-lg font-semibold text-gray-800">Product 9</h3>
-        <p class="text-gray-600">Gourmet spices and seasonings</p>
-        <button class="mt-3 bg-green-600 text-white py-2 px-4 rounded-lg">Add to Cart</button>
-    </div>
-</div>
-
-<script>
-    // Show more products when 'See More' button is clicked
-    document.getElementById('see-more').addEventListener('click', function() {
-        document.getElementById('more-products').classList.remove('hidden');
-        document.getElementById('see-more').classList.add('hidden');
+  </header>
+  
+  <script>
+    // JavaScript to toggle the hamburger menu
+    const hamburgerIcon = document.getElementById("hamburger-icon");
+    const mobileMenu = document.getElementById("mobile-menu");
+  
+    hamburgerIcon.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
     });
-</script>
+  </script>
+
+
+
+
+  <!-- Product Section -->
+  <!-- Product Section -->
+<main class="container mx-auto my-10">
+    <h2 class="text-3xl font-bold text-center mb-6">Our Fresh Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      
+      <!-- Product 1 -->
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <img src="https://raw.githubusercontent.com/AATHILDUCKY/fresh_grocers/refs/heads/main/apple.jpg" alt="Product 1" class="w-full h-40 object-cover rounded-md">
+        <h3 class="text-xl font-semibold mt-4">Fresh Apple</h3>
+        <p class="text-gray-600 mt-2">$5.00</p>
+        <a href="#" class="mt-4 inline-block bg-green-600 text-white px-6 py-2 rounded-full">Add to Cart</a>
+      </div>
+  
+      <!-- Product 2 -->
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <img src="https://raw.githubusercontent.com/AATHILDUCKY/fresh_grocers/refs/heads/main/banana.jpg" alt="Product 2" class="w-full h-40 object-cover rounded-md">
+        <h3 class="text-xl font-semibold mt-4">Banana Bunch</h3>
+        <p class="text-gray-600 mt-2">$3.00</p>
+        <a href="#" class="mt-4 inline-block bg-green-600 text-white px-6 py-2 rounded-full">Add to Cart</a>
+      </div>
+  
+      <!-- Product 3 -->
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <img src="https://raw.githubusercontent.com/AATHILDUCKY/fresh_grocers/refs/heads/main/crt.jpg" alt="Product 3" class="w-full h-40 object-cover rounded-md">
+        <h3 class="text-xl font-semibold mt-4">Carrot Bundle</h3>
+        <p class="text-gray-600 mt-2">$4.50</p>
+        <a href="#" class="mt-4 inline-block bg-green-600 text-white px-6 py-2 rounded-full">Add to Cart</a>
+      </div>
+  
+      <!-- Product 4 -->
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <img src="https://raw.githubusercontent.com/AATHILDUCKY/fresh_grocers/refs/heads/main/broc.jpg" alt="Product 4" class="w-full h-40 object-cover rounded-md">
+        <h3 class="text-xl font-semibold mt-4">Fresh Broccoli</h3>
+        <p class="text-gray-600 mt-2">$6.00</p>
+        <a href="#" class="mt-4 inline-block bg-green-600 text-white px-6 py-2 rounded-full">Add to Cart</a>
+      </div>
+  
+      <!-- Product 5 -->
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <img src="https://raw.githubusercontent.com/AATHILDUCKY/fresh_grocers/refs/heads/main/avo.jpg" alt="Product 5" class="w-full h-40 object-cover rounded-md">
+        <h3 class="text-xl font-semibold mt-4">Avocados</h3>
+        <p class="text-gray-600 mt-2">$7.50</p>
+        <a href="#" class="mt-4 inline-block bg-green-600 text-white px-6 py-2 rounded-full">Add to Cart</a>
+      </div>
+  
+      <!-- Product 6 -->
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <img src="https://raw.githubusercontent.com/AATHILDUCKY/fresh_grocers/refs/heads/main/cucu.jpg" alt="Product 6" class="w-full h-40 object-cover rounded-md">
+        <h3 class="text-xl font-semibold mt-4">Cucumber</h3>
+        <p class="text-gray-600 mt-2">$2.50</p>
+        <a href="#" class="mt-4 inline-block bg-green-600 text-white px-6 py-2 rounded-full">Add to Cart</a>
+      </div>
+  
+      <!-- Product 7 -->
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <img src="https://raw.githubusercontent.com/AATHILDUCKY/fresh_grocers/refs/heads/main/strw.jpg" alt="Product 7" class="w-full h-40 object-cover rounded-md">
+        <h3 class="text-xl font-semibold mt-4">Strawberries</h3>
+        <p class="text-gray-600 mt-2">$8.00</p>
+        <a href="#" class="mt-4 inline-block bg-green-600 text-white px-6 py-2 rounded-full">Add to Cart</a>
+      </div>
+  
+      <!-- Product 8 -->
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <img src="https://raw.githubusercontent.com/AATHILDUCKY/fresh_grocers/refs/heads/main/spin.jpg" alt="Product 8" class="w-full h-40 object-cover rounded-md">
+        <h3 class="text-xl font-semibold mt-4">Spinach</h3>
+        <p class="text-gray-600 mt-2">$3.75</p>
+        <a href="#" class="mt-4 inline-block bg-green-600 text-white px-6 py-2 rounded-full">Add to Cart</a>
+      </div>
+  
+      <!-- Product 9 -->
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <img src="https://raw.githubusercontent.com/AATHILDUCKY/fresh_grocers/refs/heads/main/tom.jpg" alt="Product 9" class="w-full h-40 object-cover rounded-md">
+        <h3 class="text-xl font-semibold mt-4">Tomatoes</h3>
+        <p class="text-gray-600 mt-2">$5.25</p>
+        <a href="#" class="mt-4 inline-block bg-green-600 text-white px-6 py-2 rounded-full">Add to Cart</a>
+      </div>
+  
+    </div>
+  </main>
+  
+</body>
+</html>
